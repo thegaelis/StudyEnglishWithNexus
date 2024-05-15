@@ -65,7 +65,7 @@ export default function Topic({ navigation }) {
             }
 
             {userLevel >3 ?
-             (<Lesson picture={require('../assets/hydroponic.png')} name={'Animals and Plants'} press={()=>navigation.navigate('TopicMenu',{data:{name:'Animals and Plants',words: words_animal,questions: questions_animal,grammar_animal}})}/>)
+             (<Lesson picture={require('../assets/hydroponic.png')} name={'Animals and Plants'} press={()=>navigation.navigate('TopicMenu',{data:{name:'Animals and Plants',words: words_animal,questions: questions_animal,grammar: grammar_animal}})}/>)
             :
              null
             }
@@ -87,7 +87,7 @@ export default function Topic({ navigation }) {
              null
             }
             {userLevel > 7?
-             ( <Lesson picture={require('../assets/travel.png')} name={'Travel and Culture'} press={()=>navigation.navigate('TopicMenu',{data:{name:'Travel and Culture',words: words_travel,questions: questions_travel, grammar_travel}})}/>)
+             ( <Lesson picture={require('../assets/travel.png')} name={'Travel and Culture'} press={()=>navigation.navigate('TopicMenu',{data:{name:'Travel and Culture',words: words_travel,questions: questions_travel,grammar: grammar_travel}})}/>)
             :
              null
             }
