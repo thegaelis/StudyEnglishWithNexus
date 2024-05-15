@@ -16,12 +16,14 @@ export default function About({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.appname}>{'Study English Vocabulary \nwith Nexus'}</Text>
         <Text style={styles.appinfo}>V.0.1.0</Text>
-        <Text style={styles.appinfo}>Date created: Sat, April 15, 2022</Text> 
+        <Text style={styles.appinfo}>Date created: Wed, April 24, 2024</Text> 
         <Text style={styles.appinfo}>Team members:</Text>
         <Text style={styles.name}>Huỳnh Quốc Thái - 47.01.104.188 - Team Leader</Text>
-        <Text style={styles.name}>Nguyễn Nhất Phong - 47.01.104.158 - Team Member</Text>
-        <Text style={styles.name}>Lâm Quốc Bảo - 47.01.104.048 - Team Member</Text>
         <Text style={styles.name}>Lê Minh Quang - 47.01.104.171 - Team Member</Text>
+        <Text style={styles.name}>Nguyễn Đông Phương - 47.01.104.166 - Team Member</Text>
+        <Text style={styles.name}>Nguyễn Hữu Anh Tuấn - 47.01.104.228 - Team Member</Text>
+
+
       </View>
     </View>
     
