@@ -15,6 +15,7 @@ import About from'./component/About.js';
 import Topic from './component/Topic.js';
 import TopicMenu from './component/TopicMenu.js'
 import GrammarContent from './component/GrammarContent.js';
+import DetectTextInImage from './component/DetectTextInImage.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,7 @@ function App() {
         <Stack.Screen name="About" component={About}/>
         <Stack.Screen name="TopicMenu" component={TopicMenu}/>
         <Stack.Screen name="GrammarContent" component={GrammarContent}/>
+        <Stack.Screen name="DetectTextInImage" component={DetectTextInImage}/>
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>

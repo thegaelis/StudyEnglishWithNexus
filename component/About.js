@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 export default function About({ navigation }) {
   return (
-    <View>
+    <View >
       <TouchableOpacity style={styles.topContainer} onPress={() => navigation.navigate('User')}>
           <Image source={require('../assets/back.png')} style={styles.backbanner}></Image>
           <Text style={styles.banner}>
@@ -14,7 +14,7 @@ export default function About({ navigation }) {
           </Text>
         </TouchableOpacity>
       <View style={styles.container}>
-        <Text style={styles.appname}>{'Study English Vocabulary \nwith Nexus'}</Text>
+        <Text style={styles.appname}>{'Study English Vocabulary with Nexus'}</Text>
         <Text style={styles.appinfo}>V.0.1.0</Text>
         <Text style={styles.appinfo}>Date created: Wed, April 24, 2024</Text> 
         <Text style={styles.appinfo}>Team members:</Text>
@@ -65,11 +65,12 @@ const styles = StyleSheet.create({
   },
   appname:{
     fontWeight:'bold',
-    fontSize:25,
+    fontSize:30,
     margin:10,
     justifyContent:'center',
     alignItems:'center',
     alignSelf:'center',
+    color:'green'
   },
   appinfo:{
     fontWeight:'bold',
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
   },
   name:{
     alignSelf: 'flex-start',
-    fontSize:15,
+    fontSize:20,
     margin:15,
   },
   option:{
