@@ -58,41 +58,44 @@ export default function Home({ navigation }) {
       </View>
       <ScrollView>
         <View style={styles.container}>
-          <View style={styles.itemsLeaderboard}>
-            <Text style={styles.name}>Leaderboard</Text>
-            <Image style={styles.picture} source={require('../assets/champion.png')} />
-            <Text style={styles.content}>Top 3 of the app</Text>
-            <View style={styles.leaderboardContainerFirst}>
-              <Text style={styles.leaderboardplace}>#1</Text>
-              <Text style={styles.leaderboardname}>{leaderboard?.[0]?.['name']}</Text>
-              <Text style={styles.leaderboardlevel}>{leaderboard?.[0]?.['level']}</Text>
-              <Text></Text>
+            <View style={styles.itemsLeaderboard}>
+              <Text style={styles.name}>Leaderboard</Text>
+                  <Image style={styles.picture} source={require('../assets/champion.png')} />
+                  <Text style={styles.content}>Top 3 of the app</Text>
+                  <View style={styles.leaderboardContainerFirst}>
+                    <Text style={styles.leaderboardplace}>#1</Text>
+                    <Text style={styles.leaderboardname}>{leaderboard?.[0]?.['name']}</Text>
+                    <Text style={styles.leaderboardlevel}>{leaderboard?.[0]?.['level']}</Text>
+                    <Text></Text>
+                  </View>
+                  <View style={styles.leaderboardContainerSecond}>
+                    <Text style={styles.leaderboardplace}>#2</Text>
+                    <Text style={styles.leaderboardname}>{leaderboard?.[1]?.['name']}</Text>
+                    <Text style={styles.leaderboardlevel}>{leaderboard?.[1]?.['level']}</Text>
+                  </View>
+                  <View style={styles.leaderboardContainerThird}>
+                    <Text style={styles.leaderboardplace}>#3</Text>
+                    <Text style={styles.leaderboardname}>{leaderboard?.[2]?.['name']}</Text>
+                    <Text style={styles.leaderboardlevel}>{leaderboard?.[2]?.['level']}</Text>
+                  </View>
             </View>
-            <View style={styles.leaderboardContainerSecond}>
-              <Text style={styles.leaderboardplace}>#2</Text>
-              <Text style={styles.leaderboardname}>{leaderboard?.[1]?.['name']}</Text>
-              <Text style={styles.leaderboardlevel}>{leaderboard?.[1]?.['level']}</Text>
+            <View style={styles.itemsTopic}>
+              <Text style={styles.name}>Topic</Text>
+              <Image style={styles.picture} source={require('../assets/topics.png')} />
+              <Text style={styles.content}>Current Topic: {userLevel}</Text>
+              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Topic')}>
+                <Text style={styles.b}>View all topic</Text>
+              </TouchableOpacity>
             </View>
-            <View style={styles.leaderboardContainerThird}>
-              <Text style={styles.leaderboardplace}>#3</Text>
-              <Text style={styles.leaderboardname}>{leaderboard?.[2]?.['name']}</Text>
-              <Text style={styles.leaderboardlevel}>{leaderboard?.[2]?.['level']}</Text>
-            </View>
-          </View>
-          <View style={styles.itemsTopic}>
-            <Text style={styles.name}>Topic</Text>
-            <Image style={styles.picture} source={require('../assets/topics.png')} />
-            <Text style={styles.content}>Current Topic: {userLevel}</Text>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Topic')}>
-              <Text style={styles.b}>View all topic</Text>
-            </TouchableOpacity>
-          </View>
 
-          <View style={styles.viewBtn}>
-            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('DetectTextInImage')}>
-              <Text style={styles.textBtn}>Detect text in image</Text>
-            </TouchableOpacity>
-          </View>
+            <View style={styles.itemsVision}>
+              <Text style={styles.name}>Nexus Vision</Text>
+              <Image style={styles.picture} source={require('../assets/vision.png')} />
+              <Text style={styles.content}>Reading text on image</Text>
+              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DetectTextInImage')}>
+                <Text style={styles.b}>View all topic</Text>
+              </TouchableOpacity>
+            </View>
 
         </View>
       </ScrollView>
@@ -102,108 +105,119 @@ export default function Home({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: 'auto',
-    marginLeft: 10,
-    marginBottom: 200,
-    flex: 1,
-    // justifyContent: 'space-evenly',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-
-  },
-  itemsLeaderboard: {
-    dipslay: 'flex',
-    flexDirection: 'column',
-    height: 'auto',
-    width: '85%',
-    flexBasis: '40%',
-    marginTop: 40,
-    marginHorizontal: 20,
-    borderRadius: 15,
-    backgroundColor: "lightskyblue",
-    padding: 10,
-  },
-  name: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    margin: 10,
-    color: 'white',
-  },
-  picture: {
-    alignSelf: 'center',
-    width: 100,
-    height: 100,
-    margin: 10,
-  },
-  content: {
-    margin: 10,
-    fontSize: 20,
-    fontWeight: 'bold',
-    margin: 10,
-    color: 'white',
-  },
-  leaderboardContainerFirst: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: 'auto',
-    margin: 10,
-    padding: 5,
-    borderRadius: 15,
-    backgroundColor: 'gold',
-  },
-  leaderboardContainerSecond: {
-    dipslay: 'flex',
-    flexDirection: 'row',
-    width: 'auto',
-    margin: 10,
-    padding: 5,
-    borderRadius: 15,
-    backgroundColor: 'silver',
-  },
-  leaderboardContainerThird: {
-    dipslay: 'flex',
-    flexDirection: 'row',
-    width: 'auto',
-    margin: 10,
-    padding: 5,
-    borderRadius: 15,
-    backgroundColor: 'peru',
-  },
-  leaderboardlevel: {
-    marginLeft: 'auto',
-    fontSize: 20,
-    fontWeight: 'bold',
-    margin: 5,
-    color: '#FFFFFF',
-  },
-  leaderboardname: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    margin: 5,
-    color: '#FFFFFF',
-  },
-  leaderboardplace: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    margin: 5,
-    color: '#FFFFFF',
-  },
-  itemsTopic: {
-    dipslay: 'flex',
-    flexDirection: 'column',
-    height: 'auto',
-    width: '85%',
-    flexBasis: '40%',
-    marginTop: 40,
-    marginHorizontal: 20,
-    borderRadius: 15,
-    backgroundColor: "#43bc43",
-    padding: 10,
-  },
-  button: {
-    width: 'auto',
+    container: {
+        width:'100%',
+        height:'auto',
+        marginLeft:10,
+        marginBottom:200,
+        flex: 1,
+        // justifyContent: 'space-evenly',
+        flexDirection:'column',
+        flexWrap:'wrap',
+    },
+    itemsLeaderboard:{
+      dipslay: 'flex',
+      flexDirection: 'column',
+      height:'auto',
+      width: '85%',
+      flexBasis:'40%',     
+      marginTop:40,
+      marginHorizontal:20,
+      borderRadius:15,
+      backgroundColor: "lightskyblue",
+      padding:10,
+    },
+    name:{
+      fontSize:30,
+      fontWeight:'bold',
+      margin:10,
+      color:'white',
+    },
+    picture:{
+      alignSelf:'center',
+      width:100,
+      height:100,
+      margin:10,
+    },
+    content:{
+      margin:10,
+      fontSize:20,
+      fontWeight:'bold',
+      margin:10,
+      color:'white',
+    },
+    leaderboardContainerFirst:{
+      display:'flex',
+      flexDirection:'row',
+      width:'auto',
+      margin:10,
+      padding:5,
+      borderRadius:15,
+      backgroundColor:'gold',
+    },
+    leaderboardContainerSecond:{
+      dipslay:'flex',
+      flexDirection:'row',
+      width:'auto',
+      margin:10,
+      padding:5,
+      borderRadius:15,
+      backgroundColor:'silver',
+    },
+    leaderboardContainerThird:{
+      dipslay:'flex',
+      flexDirection:'row',
+      width:'auto',
+      margin:10,
+      padding:5,
+      borderRadius:15,
+      backgroundColor:'peru',
+    },
+    leaderboardlevel:{
+      marginLeft:'auto',
+      fontSize:20,
+      fontWeight:'bold',
+      margin:5,
+      color:'#FFFFFF',
+    },
+    leaderboardname:{
+      fontSize:20,
+      fontWeight:'bold',
+      margin:5,
+      color:'#FFFFFF',
+    },
+    leaderboardplace:{
+      fontSize:20,
+      fontWeight:'bold',
+      margin:5,
+      color:'#FFFFFF',
+    },
+    itemsTopic:{
+      dipslay: 'flex',
+      flexDirection: 'column',
+      height:'auto',
+      width: '85%',
+      flexBasis:'40%',     
+      marginTop:40,
+      marginHorizontal:20,
+      borderRadius:15,
+      backgroundColor: "#43bc43",
+      padding:10,
+    },
+    itemsVision:{
+      dipslay: 'flex',
+      flexDirection: 'column',
+      height:'auto',
+      width: '85%',
+      flexBasis:'40%',     
+      marginTop:40,
+      marginHorizontal:20,
+      borderRadius:15,
+      backgroundColor: "#ed553b",
+      padding:10,
+    },
+    button:{
+      width: 'auto',
 
   },
   b: {
