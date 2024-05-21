@@ -93,7 +93,7 @@ export default function Home({ navigation }) {
               <Image style={styles.picture} source={require('../assets/vision.png')} />
               <Text style={styles.content}>Reading text on image</Text>
               <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DetectTextInImage')}>
-                <Text style={styles.b}>View all topic</Text>
+                <Text style={styles.b}>Try it</Text>
               </TouchableOpacity>
             </View>
 
