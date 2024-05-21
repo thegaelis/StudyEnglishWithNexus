@@ -25,6 +25,7 @@ export default function Option({navigation}) {
     onValue(starCountRef, (snapshot) => {
         const data = snapshot.val();
         setUserData(data);
+        setName(data.username)
     });
   }, [Email]);
 
@@ -150,7 +151,7 @@ export default function Option({navigation}) {
                   <Text style={styles.formbanner}>Info</Text>
                   <View style={styles.section}>
                       <Text style={styles.text}>Username</Text>
-                      <TextInput value={userData?.username} onChangeText={handleNameChange} style={styles.input} type="username" autoCapitalize='none'></TextInput>
+                      <TextInput value={name} onChangeText={handleNameChange} style={styles.input} type="username" autoCapitalize='none'></TextInput>
                   </View>
                   <View>
                       <TouchableOpacity style={styles.button}>
