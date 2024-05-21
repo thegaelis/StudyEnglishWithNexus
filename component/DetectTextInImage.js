@@ -142,7 +142,7 @@ export default function DetectTextInImage({ navigation }) {
                         Extracted text:
                     </Text>
                     <Text style={styles.text1} selectable={true}>
-                        {extractedText}
+                        {extractedText? extractedText: 'No text in image'}
                     </Text>
                     <StatusBar style="auto" />
                 </View>
