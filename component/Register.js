@@ -131,6 +131,9 @@ export default function Register({ navigation }) {
             <TouchableOpacity style={styles.button}>
                 <Text onPress={() => register()} style={styles.b}>Register</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
+                <Text onPress={() => navigation.navigate("Welcome")} style={styles.b}>Back</Text>
+            </TouchableOpacity>
         </View>
       </View>
     </View>
